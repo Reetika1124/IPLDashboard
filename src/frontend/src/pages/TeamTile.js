@@ -6,7 +6,7 @@ export const TeamTile = ({ teamName }) => {
 	return (
 		<div className="TeamTile">
 			<h1 className="text">
-				<Link to={`/teams/${teamName}`}>{teamName}</Link>
+				<Link to={`${process.env.REACT_APP_API_ROOT_URL}/teams/${teamName}`}>{teamName}</Link>
 			</h1>
 		</div>
 	)

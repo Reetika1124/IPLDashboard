@@ -5,7 +5,6 @@ import './YearSelector.scss';
 export const YearSelector = ({teamName}) => {
 
 	let years = [];
-	var teamName;
 	const startYear = process.env.REACT_APP_DATA_START_YEAR;
 	const endYear = process.env.REACT_APP_DATA_END_YEAR;
 
@@ -17,8 +16,8 @@ export const YearSelector = ({teamName}) => {
 		<ol className="YearSelector">
 			{
 				years.map(year => (
-					<li>
-						<Link to={`/teams/${teamName}/matches/${year}`}>{year}</Link>
+					<li  key={year}>
+						<Link to={`${process.env.REACT_APP_API_ROOT_URL}/teams/${teamName}/matches/${year}`}>{year}</Link>
 					</li>
 
 				)
